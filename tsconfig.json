@@ -15,7 +15,11 @@
       "@/Icons": [
         "src/Icons/*"
       ],
-      "@/lib": ["src/lib/*"],
-    }
+      "@/lib": [
+        "src/lib/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
