@@ -11,4 +11,8 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [tailwind(), svelte(), react()],
   output: 'server',
+  server: {
+    host: true,
+    port: 4321,
+  },
 });
