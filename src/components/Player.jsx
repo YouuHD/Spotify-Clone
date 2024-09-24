@@ -1,3 +1,4 @@
+import { usePlayerStore } from "@/store/playerStore"
 import { useEffect, useRef, useState } from "react"
 
 export const Pause = ({ className }) => (
@@ -18,7 +19,7 @@ export const Pause = ({ className }) => (
   
 
 export function Player () {
-    const [isPlaying, setIsPlaying] = useState(false)
+    const { isPlaying, setIsPlaying } = usePlayerStore(state => state)
     const [currentSong, setCurrentSong] = useState(null)
     const audioRef = useRef()
 
@@ -36,7 +37,6 @@ export function Player () {
         setIsPlaying(!isPlaying)
     }
 
-    console.log(isPlaying)
     return (
         <div className="flex flex-row justify-between w-full px-4 z-50">
             <div>
