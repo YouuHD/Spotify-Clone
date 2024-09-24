@@ -30,9 +30,9 @@ import { ViewTransitions } from 'astro:transitions'
 				<slot />
 			</main>
 			
-			<footer class="[grid-area:player] min-h-[100px] bg-zinc-900">
+			<footer class="[grid-area:player] h-[80px] ">
         <!-- Client:load para que cargue en el cliente y acargue al principio de la página -->
-				<Player client:load transition:name="media-player" transition:persist/>
+				<Player client:load transition:name="media-player" transition:persist />
 				
 			</footer>
 			
